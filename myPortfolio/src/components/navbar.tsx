@@ -1,12 +1,11 @@
-import HamburgerMenu from "./hamburgermenu"
-
+import HamburgerMenu from "./hamburgermenu";
 
 function NavbarComponent() {
-    return (
-        <div>
-            <HamburgerMenu></HamburgerMenu>
-        </div>
-    )
+  return (
+    <div className="overflow-y-scroll no-scrollbar z-auto">
+      <HamburgerMenu></HamburgerMenu>
+    </div>
+  );
 }
 
-export default NavbarComponent
+export default NavbarComponent;
