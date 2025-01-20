@@ -6,9 +6,9 @@ function App() {
 
   return (
     <>
-      <div className='bg-stone-800'>
-      <NavbarComponent />
-      <BioComponent />
+      <div className=''>
+        <NavbarComponent />
+        <BioComponent />
       </div>
     </>
   )
