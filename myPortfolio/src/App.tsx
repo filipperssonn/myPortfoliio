@@ -6,7 +6,7 @@ import NavbarComponent from "./components/navbar.tsx";
 function App() {
   return (
     <>
-      <div className="flex flex-wrap py-20 md:py-20 lg:pt-20 mx-auto h-full max-w-4xl justify-center">
+      <div className="flex flex-wrap py-10 md:py-20 lg:pt-20 h-full w-full justify-center">
         <NavbarComponent />
         <BioComponent />
         <ErfarenhetComponent />

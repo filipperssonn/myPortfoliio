@@ -11,8 +11,8 @@ function HamburgerMenu() {
   });
 
   return (
-    <div ref={ref} className="flex-row-reverse">
-      <div className="text-white overflow-hidden absolute top-0 right-0 flex justify-end">
+    <div ref={ref} className="">
+      <div className="text-white overflow-hidden absolute top-0 right-0 flex z-20">
         <Hamburger
           rounded
           direction="left"
@@ -28,7 +28,7 @@ function HamburgerMenu() {
             transition={{ duration: 0.5, ease: easeInOut }}
             className="text-slate-950 text-3xl font-semibold  bg-gray-300 top-0 right-0 justify-end w-[20vw] h-[100vh]"
           >
-            <div className="overflow-x-hidden grid-flow-row grid">
+            <div className="overflow-x-hidden grid-flow-row grid py-10">
               <a href="" className="flex justify-end py-4 px-4">
                 Home
               </a>

@@ -16,7 +16,7 @@ import profilbild from "@/assets/profilbild.jpg";
 function BioComponent() {
   return (
     <div className="">
-      <div className="flex flex-col gap-10 overflow-y-hidden">
+      <div className="flex-col overflow-y-hidden max-w-screen-sm">
         <motion.section
           variants={{
             hidden: { opacity: 0, transform: "translateY(100px)" },
@@ -120,43 +120,43 @@ function BioComponent() {
             </div>
           </div>
         </motion.section>
-        <div className=" text-gray-500 flex justify-center">
-          <motion.div
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ ease: easeInOut }}
-            className="grid grid-cols-3"
-          >
-            <span className="flex justify-center text-md size-24 items-center">
-              <FontAwesomeIcon icon={faReact} />
-              <p className="px-2 justify-center items-center">React</p>
-            </span>
-            <span className="flex justify-center text-md size-24 items-center">
-              <FontAwesomeIcon icon={faGithub} />
-              <p className="px-2 justify-center items-center">Github</p>
-            </span>
-            <span className="flex justify-center text-md size-24 items-center">
-              <FontAwesomeIcon icon={faJs} />
-              <p className="px-2 justify-center items-center">Javascript</p>
-            </span>
-            <span className="flex justify-center text-md size-24 items-center">
-              <FontAwesomeIcon icon={faHtml5} />
-              <p className="px-2 justify-center items-center">HTML</p>
-            </span>
-            <span className="flex justify-center text-md size-24 items-center">
-              <FontAwesomeIcon icon={faDatabase} />
-              <p className="px-2 justify-center items-center">MongoDB</p>
-            </span>
-            <span className="flex justify-center text-md size-24 items-center">
-              <FontAwesomeIcon icon={faNode} />
-              <p className="px-2 justify-center items-center">Node.js</p>
-            </span>
-            <span className="flex justify-center text-md size-24 items-center">
-              <FontAwesomeIcon icon={faCss3Alt} />
-              <p className="px-2 justify-center items-center">CSS</p>
-            </span>
-          </motion.div>
-        </div>
+      </div>
+      <div className=" text-gray-500 justify-center">
+        <motion.div
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ ease: easeInOut }}
+          className="flex flex-wrap pt-16 flex-1"
+        >
+          <span className="flex justify-center size-24 items-center">
+            <FontAwesomeIcon icon={faReact} />
+            <p className="px-1 items-center">React</p>
+          </span>
+          <span className="flex justify-center size-24 items-center">
+            <FontAwesomeIcon icon={faGithub} />
+            <p className="px-1 items-center">Github</p>
+          </span>
+          <span className="flex justify-center size-24 items-center">
+            <FontAwesomeIcon icon={faJs} />
+            <p className="px-1 items-center ">Javascript</p>
+          </span>
+          <span className="flex justify-center size-24 items-center">
+            <FontAwesomeIcon icon={faHtml5} />
+            <p className="px-1 items-center">HTML</p>
+          </span>
+          <span className="flex justify-center size-24 items-center">
+            <FontAwesomeIcon icon={faDatabase} />
+            <p className="px-1 items-center">MongoDB</p>
+          </span>
+          <span className="flex justify-center size-24 items-center">
+            <FontAwesomeIcon icon={faNode} />
+            <p className="px-1 items-center">Node.js</p>
+          </span>
+          <span className="flex justify-center size-24 items-center">
+            <FontAwesomeIcon icon={faCss3Alt} />
+            <p className="px-1 items-center">CSS</p>
+          </span>
+        </motion.div>
       </div>
     </div>
   );
