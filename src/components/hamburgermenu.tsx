@@ -1,17 +1,12 @@
 import { useState } from "react";
 import Hamburger from "hamburger-react";
 import { easeInOut, motion } from "framer-motion";
-import { useClickAway } from "@uidotdev/usehooks";
 
 function HamburgerMenu() {
   const [open, setOpen] = useState(false);
 
-  const ref = useClickAway(() => {
-    setOpen(false);
-  });
-
   return (
-    <div ref={ref} className="">
+    <div className="">
       <div className="text-white overflow-hidden absolute top-0 right-0 flex z-20">
         <Hamburger
           rounded
