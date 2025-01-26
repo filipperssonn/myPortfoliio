@@ -1,7 +1,7 @@
 import { easeIn, easeInOut, motion } from "framer-motion";
 import "../index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDatabase, faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import {
   faLinkedin,
   faGithub,
@@ -12,6 +12,7 @@ import {
   faCss3Alt,
 } from "@fortawesome/free-brands-svg-icons";
 import profilbild from "@/assets/profilbild.jpg";
+import cv from "@/assets/filip-persson-cv.pdf";
 
 function BioComponent() {
   return (
@@ -77,7 +78,7 @@ function BioComponent() {
                   variants={{ hidden: { opacity: 0 }, show: { opacity: 1 } }}
                   className="space-x-3 items-center justify-start flex pb-4 pt-4"
                 >
-                  <a href="{downloadCV}" target="_blank">
+                  <a href={cv} download={cv} target="_blank">
                     <motion.button
                       whileHover={{
                         scale: 1.1,
@@ -126,35 +127,31 @@ function BioComponent() {
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ ease: easeInOut }}
-          className="flex flex-wrap pt-16 flex-1"
+          className="flex mt-16 scroller"
         >
-          <span className="flex justify-center size-24 items-center">
+          <span className="scroller-inner">
             <FontAwesomeIcon icon={faReact} />
-            <p className="px-1 items-center">React</p>
+            <p className="">React</p>
           </span>
-          <span className="flex justify-center size-24 items-center">
+          <span className="scroller-inner">
             <FontAwesomeIcon icon={faGithub} />
-            <p className="px-1 items-center">Github</p>
+            <p className="">Github</p>
           </span>
-          <span className="flex justify-center size-24 items-center">
+          <span className="scroller-inner">
             <FontAwesomeIcon icon={faJs} />
-            <p className="px-1 items-center ">Javascript</p>
+            <p className="">Javascript</p>
           </span>
-          <span className="flex justify-center size-24 items-center">
+          <span className="scroller-inner">
             <FontAwesomeIcon icon={faHtml5} />
-            <p className="px-1 items-center">HTML</p>
+            <p className="">HTML</p>
           </span>
-          <span className="flex justify-center size-24 items-center">
-            <FontAwesomeIcon icon={faDatabase} />
-            <p className="px-1 items-center">MongoDB</p>
-          </span>
-          <span className="flex justify-center size-24 items-center">
+          <div className="scroller-inner">
             <FontAwesomeIcon icon={faNode} />
-            <p className="px-1 items-center">Node.js</p>
-          </span>
-          <span className="flex justify-center size-24 items-center">
+            <p className="">Node.js</p>
+          </div>
+          <span className="scroller-inner">
             <FontAwesomeIcon icon={faCss3Alt} />
-            <p className="px-1 items-center">CSS</p>
+            <p className="">CSS</p>
           </span>
         </motion.div>
       </div>
